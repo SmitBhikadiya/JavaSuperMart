@@ -1,0 +1,84 @@
+
+/* login form css */
+
+.boxborder{
+    padding: 30px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 2px 16px rgb(0, 0, 0);
+}
+.center{
+    margin: 0;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.brand{
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.brand p{
+    font-size: 35px;
+}
+
+.brand img{
+    border-radius: 20px;
+}
+
+.brand span{
+    color: red;
+}
+
+/* ShopKeeper Register form  */
+
+.form-registration{
+    margin: 0;
+    padding: 0;
+    width: 35%;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 2px 16px rgb(0, 0, 0);
+}
+
+/* Dashboard Design*/
+.nav{
+    position: relative;
+    display: flex;
+    height: 6vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* shop keeper card view info.. */
+.shopkeeperInfo{
+    width:33%;
+    margin:40px auto;
+}
+
+/* section page common */
+.page{
+    margin: 0;
+    position: relative;
+    background-color: rgba(170, 170, 170, 0.233);
+    height: 100vh;
+}
+
+#registerBtn{
+    border: 4px dotted black;
+    border-radius: 20px;
+    font-family: cursive;
+    font-size: 40px;
+    padding: 30px;
+    background: none;
+    outline: none;
+}
