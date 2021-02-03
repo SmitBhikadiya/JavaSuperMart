@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,14 @@
     <link rel="stylesheet" href="static/css/skDashboard.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="jumbotron text-center" style="margin-bottom:0">
         <h1>Welcome, Smit Bhikadiya</h1>
-        <p>sbhikadiya892@gmail.com</p> 
+        <p>sbhikadiya892@gmail.com</p>
     </div>
-      
+
     <div class="nav bg-dark">
         <div>
             <a href="#page1" class="text-light">Your Store</a>
@@ -29,11 +31,11 @@
             <a href="#page3" class="text-light">Edit Me</a>
         </div>
         <div>
-            <a href="#"  class="text-light">Logout</a>
+            <a href="#" class="text-light">Logout</a>
         </div>
     </div>
 
-    <div class="shopkeeperInfo mb-5">
+    <!--<div class="shopkeeperInfo mb-5">
         <div class="card mb-3" style="max-width: 540px;">
             <div class="card-header">
                 About You
@@ -54,25 +56,30 @@
               </div>
             </div>
           </div>
-    </div>
+    </div>-->
 
     <section id="page1" class="page">
         <div class="center">
-            <button id="registerBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
-                </svg>
-                <p class="mt-3">Register Your Store</p>
-            </button>
+            <a id="registerLink" href="#">
+                <button id="registerBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+                    </svg>
+                    <p class="mt-3">Register Your Store</p>
+                </button>
+            </a>
         </div>
     </section>
     <section id="page2" class="page" style="background-color: rgba(128, 83, 0, 0.233);">
-      </section>
+    </section>
     <section id="page3" class="page" style="background-color: rgba(0, 128, 28, 0.233);">
     </section>
-      
+
 
     <!-- External JS -->
     <script src="static/js/skDashboard.js"></script>
 </body>
+
 </html>
