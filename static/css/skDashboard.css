@@ -87,3 +87,16 @@
 #registerLink:hover{
     text-decoration: none;
 }
+
+.width5center{
+    width: 50%;
+    margin: 10px auto;
+}
+.width7center{
+    width: 70%;
+    margin: 10px auto;
+}
+.width9center{
+    width: 90%;
+    margin: 10px auto;
+}

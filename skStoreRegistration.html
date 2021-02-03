@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css">
+    <script src="static/bootstrap/jquery.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="static/css/skDashboard.css">
+    <title>Store Registration</title>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Store Registration</h1>
+        <p>Owner:- Shaileshbhai Lakhani</p>
+        <a href="shopkeeperDashboard.html">Back To Dashboard</a>
+    </div>
+    <div class="card mb-3 width7center" style="max-width: 540px;">
+        <div class="card-header text-center">
+            <h3>Step-1 : Store Registration</h3>
+        </div>
+        <div class="width9center">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="storeName">Register Storename</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storeName">Store Image</label>
+                                <input type="file" accept=".jpeg,jpg,.png" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storeName">Store Address</label>
+                                <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="storeType">Store Type</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="Grocery">Grocery Store</option>
+                                    <option value="Fruits" disabled>Fruits Store</option>
+                                    <option value="Vegetables" disabled>Vegetables Store</option>
+                                    <option value="Farsan" disabled>Farsan Store</option>
+                                    <option value="Frozen Foods" disabled>Frozen Foods Store</option>
+                                    <option value="Statinory" disabled>Statinory Store</option>
+                                </select>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <input type="submit" class="form-control btn btn-primary" value="Register">
+                                <div style="margin-top: 10px;">
+                                    <a href="#storeItemsRegistration">Step-2 : To Add
+                                        Items</a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="storeItemsRegistration" class="page">
+
+    </section>
+</body>
+
+</html>
