@@ -1,3 +1,4 @@
-document.getElementById("registerBtn").addEventListener("click",function(){
+
+function myFunc(me){
     
-});
+}

@@ -72,6 +72,12 @@
     background-color: rgba(170, 170, 170, 0.233);
     height: 100vh;
 }
+.page5{
+    margin: 0;
+    position: relative;
+    background-color: rgba(170, 170, 170, 0.233);
+    height: 50vh;
+}
 
 #registerBtn{
     display: block;
@@ -99,4 +105,12 @@
 .width9center{
     width: 90%;
     margin: 10px auto;
+}
+
+#storeItemsRegistration{
+    height: 200%;
+}
+
+.table{
+    overflow: scroll;
 }
