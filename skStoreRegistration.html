@@ -33,7 +33,7 @@
                         <form action="">
                             <div class="form-group">
                                 <label for="storeName">Register Storename</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="storeName">Store Image</label>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="storeName">Store Address</label>
-                                <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                                <textarea name="" id="" cols="30" rows="3" class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="storeType">Store Type</label>
@@ -53,6 +53,12 @@
                                     <option value="Frozen Foods" disabled>Frozen Foods Store</option>
                                     <option value="Statinory" disabled>Statinory Store</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="storeName">Store Opening Time</label>
+                                <input type="time" class="form-control" required>
+                                <label for="storeName">Store Closing Time</label>
+                                <input type="time" class="form-control" required>
                             </div>
                             <div style="margin-top: 20px;">
                                 <input type="submit" class="form-control btn btn-primary" onclick="return myFunc()" value="Register & Next Step">
@@ -82,7 +88,7 @@
                         <input type="submit" class="form-control btn btn-primary" value="Add To List">
                     </div>
                 </form>
-                <div class="card mt-2">
+                <div class="card mt-3">
                     <div class="card-header text-center">
                         <h4>Added Items</h4>
                     </div>
@@ -151,10 +157,8 @@
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <script src="static/js/skDashboard.js"></script>
