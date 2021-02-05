@@ -21,8 +21,8 @@
         <p>Owner:- Smit D. Bhikadiya</p>
         <a href="shopkeeperDashboard.html">Back To Dashboard</a>
     </div>
-
-    <div class="m-3 d-flex flex-wrap justify-content-around">
+    
+        <div class="m-3 d-flex flex-wrap justify-content-around">
         <div class="card flex-fill">
             <div class="card-header text-center">
                 <h3>Step-1 : Store Registration</h3>
@@ -69,7 +69,8 @@
             </div>
         </div>
 
-        <div class="card flex-fill" onclick="return false;">
+
+        <div class="card flex-fill ml-2" onclick="">
             <div class="card-header text-center">
                 <h3>Step-2 : Added Items</h3>
             </div>
@@ -81,9 +82,21 @@
                     </div>
 
                     <div class="d-flex">
-                        <input type="text" placeholder="Item Prize" class="form-control mr-3">
-                        <input type="text" placeholder="Item Discount" class="form-control">
+                        <input type="number" placeholder="Total Quantity of Item" min=0 step="1" class="form-control mb-3">
+                        <select name="" id="" class="form-control" style="width: 200px;">
+                            <option value="kg">in kg</option>
+                            <option value="gram">in gram</option>
+                            <option value="piese">in piece</option>
+                            <option value="L">in liter</option>
+                            <option value="ml">in milileter</option>
+                        </select> 
                     </div>
+
+                    <div class="d-flex">
+                        <input type="text" placeholder="Item Prize with Discount" class="form-control mr-3">
+                        <input type="number" max="100" min="0" step="1" placeholder="Enter Item Discount (recommand: 50%)" class="form-control">
+                    </div>
+
                     <div style="margin-top: 20px;">
                         <input type="submit" class="form-control btn btn-primary" value="Add To List">
                     </div>
@@ -99,6 +112,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Image</th>
                                     <th scope="col">Items</th>
+                                    <th scope="col">Total Qty</th>
                                     <th scope="col">Prize</th>
                                     <th scope="col">Discount</th>
                                     <th scope="col">Actions</th>
@@ -107,51 +121,30 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                    <td><img src="static/img/apple.png" width="50px" height="50" alt=""></td>
+                                    <td>Apple</td>
+                                    <td>10 kg</td>
+                                    <td>45</td>
+                                    <td>10%</td>
+                                    <td><a href="#">Edit</a> | <a href="#">Remove</a></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                    <th scope="row">2</th>
+                                    <td><img src="static/img/banana.png" width="50px" height="50" alt=""></td>
+                                    <td>Banana</td>
+                                    <td>24 dozen</td>
+                                    <td>45</td>
+                                    <td>0%</td>
+                                    <td><a href="#">Edit</a> | <a href="#">Remove</a></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="static/img/profile.jpeg" width="50px" height="50" alt=""></td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                    <th scope="row">3</th>
+                                    <td><img src="static/img/grapes.png" width="50px" height="50" alt=""></td>
+                                    <td>Graps</td>
+                                    <td>30 kg</td>
+                                    <td>60</td>
+                                    <td>25%</td>
+                                    <td><a href="#">Edit</a> | <a href="#">Remove</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -161,6 +154,7 @@
         </div>
     </div>
 
+    <script src="static/bootstrap/javascript.min.js"></script>
     <script src="static/js/skDashboard.js"></script>
 </body>
 
