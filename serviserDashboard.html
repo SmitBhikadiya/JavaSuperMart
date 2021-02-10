@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="static/css/skDashboard.css">
+    <link rel="stylesheet" href="static/css/sDashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Welcome, Salman Khan</h1>
+        <p>sultan@gmail.com</p>
+    </div>
+
+    <div class="nav p-1">
+        <div class="">
+            <a href="#request" class="text-light">All Request: <span class="nuberoforder">3</span></a>
+        </div>
+        <div class="">
+            <a href="serviserAccepted.html" class="text-light">Current Accpeted</a>
+        </div>
+        <div class="">
+            <a href="#accountDetailes" class="text-light">Account Detailes</a>
+        </div>
+        <div class="">
+            <a href="#page3" class="text-light">Completed: <span class="nuberoforder">1</span></a>
+        </div>
+        <div class="">
+            <a href="#" class="text-light">Logout</a>
+        </div>
+    </div>
+
+    <section id="accountDetailes">
+        <div class="d-flex justify-content-around m-5 align-items-center">
+            <div class="card mb-3" style="width: 45%;">
+                <div class="card-header text-center">
+                    About You
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-3 mt-2 p-2">
+                        <img src="static/img/profileImg/salman.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Salman A. Khan</h5>
+                            <p class="card-text">Status:-<span id="status">Busy</span></p>
+                            <p class="card-text">Ema.:- sultan@gmail.com</p>
+                            <p class="card-text">Mob.:- 6897697655</p>
+                            <p class="card-text">Add.:- Bigboss, Mumbai</p>
+                            <p class="card-text">Successfully Delivered Order:- <kbd>05</kbd></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="request">
+
+        <div class="section-heading text-center mb-5 p-1">All Request</div>
+
+        <div class="mycard">
+            <div class="d-flex flex-wrap form-group">
+                <div class="card-section col-md-1 text-center" style="margin-right: 0; width: 100%;">
+                    <p>Sr.No</p>
+                    <h5>01</h5>
+                </div>
+                <div class="card-section col-md-1 text-center">
+                    <p>Time</p>
+                    <h5>11:24 PM</h5>
+                </div>
+                <div class="card-section col-md-5" style="margin-right: 0;">
+                    <div>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Mahavir Store</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7096794624</div>
+                    <div>Add: shop-24, haridardhan, Gadhada Road, Botad </div>
+                </div>
+                <div class="card-section col-md-4">
+                    <div>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Smit Bhikadiya</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>709679462</div>
+                    <div>Add: Malini Vadi, Gadhada Road, Botad</div>
+                </div>
+                <div class="card-section col-md-1">
+                    <p class="text-center">Action</p>
+                    <div class="card-action-links">
+                        <a href="" class="btn btn-success mb-2">Accept</a>
+                        <a href="#" onclick="">decline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mycard">
+            <div class="d-flex flex-wrap form-group">
+                <div class="card-section col-md-1 text-center" style="margin-right: 0; width: 100%;">
+                    <p>Sr.No</p>
+                    <h5>02</h5>
+                </div>
+                <div class="card-section col-md-1 text-center">
+                    <p>Time</p>
+                    <h5>12:50 PM</h5>
+                </div>
+                <div class="card-section col-md-5" style="margin-right: 0;">
+                    <div>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Ambani Fruits Store</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7096794624</div>
+                    <div>Add: shop-501, radheapart, turkha Road, Botad </div>
+                </div>
+                <div class="card-section col-md-4">
+                    <div>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Savan Shiyal</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7697876958</div>
+                    <div>Add: 34 tulsinagar, Gadhada Road, Botad</div>
+                </div>
+                <div class="card-section col-md-1">
+                    <p class="text-center">Action</p>
+                    <div class="card-action-links">
+                        <a href="" class="btn btn-success mb-2">Accept</a>
+                        <a href="#" onclick="">decline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mycard">
+            <div class="d-flex flex-wrap form-group">
+                <div class="card-section col-md-1 text-center" style="margin-right: 0; width: 100%;">
+                    <p>Sr.No</p>
+                    <h5>03</h5>
+                </div>
+                <div class="card-section col-md-1 text-center">
+                    <p>Time</p>
+                    <h5>4:40 PM</h5>
+                </div>
+                <div class="card-section col-md-5" style="margin-right: 0;">
+                    <div>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Madhuram Store</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>6759564558</div>
+                    <div>Add: 5-rupastore, Gadhada Road, Botad </div>
+                </div>
+                <div class="card-section col-md-4">
+                    <div>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Ankit Baddhah</h5>
+                    </div>
+                    <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>9565796544</div>
+                    <div>Add: rajmohan, paliyad Road, botad</div>
+                </div>
+                <div class="card-section col-md-1">
+                    <p class="text-center">Action</p>
+                    <div class="card-action-links">
+                        <a href="" class="btn btn-success mb-2">Accept</a>
+                        <a href="#" onclick="">decline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- External JS -->
+    <script src="static/js/sDashboard.js"></script>
+</body>
+
+</html>
