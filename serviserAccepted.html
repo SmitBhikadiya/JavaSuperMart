@@ -15,32 +15,73 @@
 </head>
 
 <body>
-    <div class="track-box">
-        <div class="row col-sm-12 header">
-            <p>Order: 1</p>
-        </div>
+    <div class="text-center toptitle" style="margin-bottom:5px">
+        <h3>Remaining Orders</h3>
+        <h1>5</h1>
+        <a href="serviserDashboard.html">Back To Dashboard</a>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="info col-md-8">
-                info
+            <div class="sidebar col-md-3">
+                <div class="sidebar-title">Pending Orders</div>
+                <div class="sidebar-div">Order1: from Mahavir Store</div>
+                <div class="sidebar-div">Order2: from Bombay Choppati</div>
+                <div class="sidebar-div">Order3: from Guljar Dhosa</div>
+                <div class="sidebar-div">Order4: from Mahavir Store</div>
+                <div class="sidebar-div">Order5: from Bombay Choppati</div>
             </div>
-            <div class="action col-md-4">
-               info
-            </div>
-        </div>
-        <div class="row">
-            
-            </div>
-            <div class="action">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="info">
+            <div class="col-md-6">
+                <div class="track-box">
+                    <div class="row">
+                        <div class="col-md-12 header">
+                            <p>Order Id: 1</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="title col-md-8">
+                            Stages
+                        </div>
+                        <div class="title col-md-4 text-center">
+                            Update UR Progress
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="stage col-md-8">
+                            <div class="que">Are you pick-up the order from the shop?</div>
+                            <div>Address: mahavir store, gadhada road, botad</div>
+                            <div>Contact: 7659695649</div>
+                        </div>
+                        <div class="action col-md-4">
+                            <div>
+                                <input type="checkbox" id="check1" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="stage col-md-8">
+                            <div class="que">Are you reach the customer with order?</div>
+                            <div>Address: malini vadi, gadhada road, botad</div>
+                            <div>Contact: 9067458454</div>
+                        </div>
+                        <div class="action col-md-4">
+                            <div>
+                                <input type="checkbox" id="check2" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="action">
-
+            <div class="sidebar col-md-3">
+                <div class="sidebar-title">Completed Orders</div>
+                <div class="sidebar-div g">Order1: from Mahavir Store</div>
+                <div class="sidebar-div g">Order2: from Bombay Choppati</div>
+                <div class="sidebar-div g">Order3: from Guljar Dhosa</div>
             </div>
         </div>
     </div>
+
+
+
+    <script src="static/js/sDashboard.js"></script>
 </body>

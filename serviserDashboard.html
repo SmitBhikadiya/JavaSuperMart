@@ -56,7 +56,7 @@
                             <p class="card-text">Ema.:- sultan@gmail.com</p>
                             <p class="card-text">Mob.:- 6897697655</p>
                             <p class="card-text">Add.:- Bigboss, Mumbai</p>
-                            <p class="card-text">Successfully Delivered Order:- <kbd>05</kbd></p>
+                            <p class="card-text">Successfully Delivered Order:- <kbd>03</kbd></p>
                         </div>
                     </div>
                 </div>
@@ -79,14 +79,16 @@
                 </div>
                 <div class="card-section col-md-5" style="margin-right: 0;">
                     <div>
-                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Mahavir Store</h5>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Mahavir
+                            Store</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7096794624</div>
                     <div>Add: shop-24, haridardhan, Gadhada Road, Botad </div>
                 </div>
                 <div class="card-section col-md-4">
                     <div>
-                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Smit Bhikadiya</h5>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Smit
+                            Bhikadiya</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>709679462</div>
                     <div>Add: Malini Vadi, Gadhada Road, Botad</div>
@@ -113,14 +115,16 @@
                 </div>
                 <div class="card-section col-md-5" style="margin-right: 0;">
                     <div>
-                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Ambani Fruits Store</h5>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Ambani
+                            Fruits Store</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7096794624</div>
                     <div>Add: shop-501, radheapart, turkha Road, Botad </div>
                 </div>
                 <div class="card-section col-md-4">
                     <div>
-                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Savan Shiyal</h5>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Savan
+                            Shiyal</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>7697876958</div>
                     <div>Add: 34 tulsinagar, Gadhada Road, Botad</div>
@@ -147,14 +151,16 @@
                 </div>
                 <div class="card-section col-md-5" style="margin-right: 0;">
                     <div>
-                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png" alt="store">Madhuram Store</h5>
+                        <h5 title="place to pick order"><img src="static/img/meterialIcon/store.png"
+                                alt="store">Madhuram Store</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>6759564558</div>
                     <div>Add: 5-rupastore, Gadhada Road, Botad </div>
                 </div>
                 <div class="card-section col-md-4">
                     <div>
-                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Ankit Baddhah</h5>
+                        <h5 title="place to drop order"><img src="static/img/meterialIcon/home.png" alt="home">Ankit
+                            Baddhah</h5>
                     </div>
                     <div><i class="mr-1 fa fa-phone" aria-hidden="true"></i>9565796544</div>
                     <div>Add: rajmohan, paliyad Road, botad</div>
@@ -174,7 +180,16 @@
 
 
     <!-- External JS -->
-    <script src="static/js/sDashboard.js"></script>
+    <script>
+        const status = document.getElementById("status").innerText;
+        if (status === "Available") {
+            document.getElementById("status").setAttribute("style", "color:green;font-weight:650");
+        }
+        else {
+            document.getElementById("status").setAttribute("style", "color:red;font-weight:650");
+            document.getElementsByClassName("card-action-links")[0].setAttribute("onclick","retutn false;");
+        }
+    </script>
 </body>
 
 </html>

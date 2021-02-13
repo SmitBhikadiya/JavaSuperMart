@@ -1,7 +1,20 @@
-const status = document.getElementById("status").innerText;
-if(status === "Available"){
-    document.getElementById("status").setAttribute("style","color:green;font-weight:650");
-}
-else{
-    document.getElementById("status").setAttribute("style","color:red;font-weight:650");
-}
+
+const check1 = document.getElementById("check1");
+const check2 = document.getElementById("check2");
+
+check1.addEventListener("change",function(){
+    if(this.checked===false){
+        check2.checked = false;
+    }
+});
+
+check2.addEventListener("change",function(){
+    if(this.checked===true){
+        if(check1.checked === true){
+            this.checked = true;
+        }
+        else{
+            this.checked = false;
+        }
+    }
+});
