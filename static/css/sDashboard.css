@@ -125,7 +125,8 @@ body{
 }
 
 .toptitle{
-    background-color: #1d1d1d;
-    color: aliceblue;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 5px;
+    color: rgb(255, 0, 0);
     padding: 10px;
 }
