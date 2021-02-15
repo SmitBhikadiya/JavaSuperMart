@@ -21,8 +21,25 @@
         <p>Owner:- Smit D. Bhikadiya</p>
         <a href="shopkeeperDashboard.html">Back To Dashboard</a>
     </div>
-    
-        <div class="m-3 d-flex flex-wrap justify-content-around">
+
+    <div class="nav p-1">
+        <div class="">
+            <a href="skStoreRegistration.html" class="text-light">Your Store</a>
+        </div>
+        <div class="">
+            <a href="#page2" class="text-light">Remaining Order: <span class="nuberoforder">3</span></a>
+        </div>
+        <div class="">
+            <a href="#page3" class="text-light">Orders History: <span class="nuberoforder">1</span></a>
+        </div>
+        <div class="">
+            <a href="skRegistrationForm.html" class="text-light">Edit Me</a>
+        </div>
+        <div class="">
+            <a href="#" class="text-light">Logout</a>
+        </div>
+    </div>
+    <div class="m-3 d-flex flex-wrap justify-content-around">
         <div class="card flex-fill">
             <div class="card-header text-center">
                 <h3>Step-1 : Store Registration</h3>
@@ -41,7 +58,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="storeName">Store Address</label>
-                                <textarea name="" id="" cols="30" rows="3" class="form-control" required></textarea>
+                                <textarea name="" id="" cols="30" rows="2" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="storeContact">Store Contact Number</label>
+                                <input type="number" class="form-control" max="9999999999">
                             </div>
                             <div class="form-group">
                                 <label for="storeType">Store Type</label>
@@ -62,7 +83,8 @@
                                 <input type="time" class="form-control" required>
                             </div>
                             <div style="margin-top: 20px;">
-                                <input type="submit" class="form-control btn btn-primary" onclick="return myFunc()" value="Register & Next Step">
+                                <input type="submit" class="form-control btn btn-primary" onclick="return myFunc()"
+                                    value="Register & Next Step">
                             </div>
                         </form>
                     </div>
@@ -83,7 +105,8 @@
                     </div>
 
                     <div class="d-flex">
-                        <input type="number" placeholder="Total Quantity of Item" min=0 step="1" class="form-control mb-3">
+                        <input type="number" placeholder="Total Quantity of Item" min=0 step="1"
+                            class="form-control mb-3">
                         <select name="" id="" class="form-control" style="width: 200px;">
                             <option value="kg">in kg</option>
                             <option value="gram">in gram</option>
@@ -96,11 +119,14 @@
 
                     <div class="d-flex">
                         <input type="text" placeholder="Prize per Item with Discount" class="form-control mr-3">
-                        <input type="number" max="100" min="0" step="1" placeholder="Enter Item Discount (recommand: 50%)" class="form-control mb-3">
+                        <input type="number" max="100" min="0" step="1"
+                            placeholder="Enter Item Discount (recommand: 50%)" class="form-control mb-3">
                     </div>
 
                     <div class="d-flex">
-                        <textarea name="" id="" cols="30" rows="1" class="form-control" placeholder="Describe your product.." title="Example of shooes:- Staint and water resitance leather"></textarea>
+                        <textarea name="" id="" cols="30" rows="1" class="form-control"
+                            placeholder="Describe your product.."
+                            title="Example of shooes:- Staint and water resitance leather"></textarea>
                     </div>
 
                     <div style="margin-top: 20px;">

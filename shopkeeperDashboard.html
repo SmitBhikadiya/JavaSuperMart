@@ -9,6 +9,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="static/css/skDashboard.css">
+    <link rel="stylesheet" href="static/css/skcard.css">
     <title>Document</title>
 </head>
 
@@ -71,10 +72,9 @@
                 </button>
             </a>
         </div>
-
     </div>
     <section id="page2" class="page">
-        <div class="card mt-2">
+        <!--<div class="d-none card mt-2">
             <div class="card-header text-center">
                 <h4>Remaining Orders</h4>
             </div>
@@ -164,6 +164,135 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+    -->
+
+        <div class="skcard">
+            <div class="skcard-header row">
+                <div class="skcard-header-number col-sm-1">1</div>
+                <div class="skcard-header-cinfo col-sm-11">
+                    <div>Customer Information:-<a href="#">Smit Dhaneshbhai Bhikadiya</a></div>
+                    <div>Address: Shantinagar, GadhadaRoad, Botad</div>
+                </div>
+            </div>
+            <div class="skcard-body row">
+                <div class="skcard-itemsection col-sm-12">
+                    <div class="card-table">
+                        <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <th scope="col">Iimg</th>
+                                    <th scope="col">Iname</th>
+                                    <th scope="col">Iprize(per unit)</th>
+                                    <th scope="col">Iqty</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Mark as Available</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td><img class="oimg" src="static/img/apple.png" alt="apple"></td>
+                                    <td> <a href="#">Apple</a></td>
+                                    <td>50/kg</td>
+                                    <td>4</td>
+
+                                    <td>50X4= 200/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td> <img class="oimg" src="static/img/banana.png" alt=""> </td>
+                                    <td> <a href="#">Banana</a> </td>
+                                    <td>65/dozen</td>
+                                    <td>2</td>
+
+                                    <td>65X2= 130/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td> <img class="oimg" src="static/img/grapes.png" alt=""> </td>
+                                    <td> <a href="#">Graps </a> </td>
+                                    <td>70/kg</td>
+                                    <td>1</td>
+
+                                    <td>70X1= 70/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">Total Item : 3</td>
+                                    <td class="bill">Total = <span>400/-</span></td>
+                                    <td>All Available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="skcard-actions row">
+                <a href="#" class="skcard-accept">Accept</a>
+                <a href="#" class="skcard-cancel">Cancel</a>
+            </div>
+        </div>
+
+        <div class="skcard">
+            <div class="skcard-header row">
+                <div class="skcard-header-number col-sm-1">2</div>
+                <div class="skcard-header-cinfo col-sm-11">
+                    <div>Customer Information:-<a href="#">Shailesh Nareshbhai Lakhani</a></div>
+                    <div>Address: Mangalpara, GadhadaRoad, Botad</div>
+                </div>
+            </div>
+            <div class="skcard-body row">
+                <div class="skcard-itemsection col-sm-12">
+                    <div class="card-table">
+                        <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <th scope="col">Iname</th>
+                                    <th scope="col">Iprize(per unit)</th>
+                                    <th scope="col">Iqty</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Mark as Available</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>50/kg</td>
+                                    <td>04</td>
+
+                                    <td>50X4= 200/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>banana</td>
+                                    <td>65/dozen</td>
+                                    <td>02</td>
+
+                                    <td>65X2= 130/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>Graps</td>
+                                    <td>70/kg</td>
+                                    <td>01</td>
+
+                                    <td>70X1= 70/-</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">Total Item : 03</td>
+                                    <td class="bill">Total = <span>400/-</span></td>
+                                    <td>All Available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="skcard-actions row">
+                <a href="#" class="skcard-accept">Accept</a>
+                <a href="#" class="skcard-cancel">Cancel</a>
             </div>
         </div>
     </section>
