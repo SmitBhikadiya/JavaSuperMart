@@ -1239,6 +1239,7 @@ only screen and (max-width: 767.98px) {
 .sticky.is-sticky .main-menu .sticky-logo {
 	display: block;
 	z-index: 11;
+	max-width: 140px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px),
