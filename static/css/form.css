@@ -1,0 +1,46 @@
+
+/* login form css */
+
+.boxborder{
+    padding: 30px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 2px 16px rgb(0, 0, 0);
+}
+.center{
+    margin: 0;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.brand{
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.brand p{
+    font-size: 35px;
+}
+
+.brand img{
+    border-radius: 20px;
+}
+
+.brand span{
+    color: red;
+}
+
+/* ShopKeeper Register form  */
+
+.form-registration{
+    margin: 0;
+    padding: 0;
+    width: 35%;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 2px 16px rgb(0, 0, 0);
+}
