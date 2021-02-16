@@ -78,6 +78,24 @@
     margin: 10px auto;
 }
 
+@media screen and (max-width:1000px){
+    .width5center{
+        width:70%;
+    }
+    .width7center{
+        width: 90%;
+    }
+    .width9center{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:690px){
+    .width5center{
+        width:90%;
+    }
+}
+
 #storeItemsRegistration{
     height: 200%;
 }
