@@ -44,6 +44,11 @@
 		-> orderStatus
 		-> ordersArrivalTime
 		-> orderGenreatedTime
+
+	-> Tracks
+		-> trkId (primary key)
+		-> ordId (foreign key)
+		-> status
 		
 		
 	-> servicer
