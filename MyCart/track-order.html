@@ -2,14 +2,17 @@
 <html class="no-js" lang="zxx">
 
 
-<!-- Mirrored from htmldemo.hasthemes.com/selena/selena/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 10:23:33 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Mirrored from htmldemo.hasthemes.com/selena/selena/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 10:23:30 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="meta description">
     <title>SuperMart</title>
+
     <!--=== All Plugins CSS ===-->
     <link href="assets/css/plugins.css" rel="stylesheet">
     <!--=== All Vendor CSS ===-->
@@ -28,6 +31,41 @@
 </head>
 
 <body>
+
+    <!-- Quick view modal start -->
+    <div class="modal" id="quick_view">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-10 hh-grayBox pt45 pb20">
+                                <div class="row justify-content-between">
+                                    <div class="order-tracking completed">
+                                        <span class="is-complete"></span>
+                                        <p>Ordered<br><span>Mon, June 24</span></p>
+                                    </div>
+                                    <div class="order-tracking completed">
+                                        <span class="is-complete"></span>
+                                        <p>Shipped<br><span>Tue, June 25</span></p>
+                                    </div>
+                                    <div class="order-tracking">
+                                        <span class="is-complete"></span>
+                                        <p>Delivered<br><span>Fri, June 28</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick view modal end -->
+
 
     <!-- Start Header Area -->
     <header class="header-area">
@@ -129,10 +167,10 @@
                     <div class="col-12">
                         <div class="breadcrumb-wrap text-center">
                             <nav aria-label="breadcrumb">
-                                <h2>contact</h2>
+                                <h2>Order Tracker</h2>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">contact us</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Track</li>
                                 </ul>
                             </nav>
                         </div>
@@ -142,72 +180,92 @@
         </div>
         <!-- breadcrumb area end -->
 
-        <!-- contact area start -->
-        <div class="contact-area">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-lg-6">
-                        <div class="contact-message pt-56 pb-60">
-                            <h2>tell us your project</h2>
-                            <form id="contact-form" action="https://htmlmail.hasthemes.com/uzzal/selena.php" method="post" class="contact-form">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="first_name" placeholder="Name *" type="text" required>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="phone" placeholder="Phone *" type="text" required>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="email_address" placeholder="Email *" type="text" required>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="contact_subject" placeholder="Subject *" type="text">
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="contact2-textarea text-center">
-                                            <textarea placeholder="Message *" name="message" class="form-control2"
-                                                required=""></textarea>
-                                        </div>
-                                        <div class="contact-btn">
-                                            <button class="btn btn__bg btn__sqr" type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <p class="form-messege"></p>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="contact-info bg-gray pt-56 pb-md-46 mb-sm-24">
-                            <h2>contact us</h2>
-                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
-                                Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit
-                                litterarum formas human.</p>
-                            <ul>
-                                <li><i class="fa fa-fax"></i> Address : Your address goes here</li>
-                                <li><i class="fa fa-phone"></i> demo@example.com</li>
-                                <li><i class="fa fa-envelope-o"></i> 0123456789</li>
-                            </ul>
-                            <div class="working-time">
-                                <h3>Working hours</h3>
-                                <p><span>Monday – Saturday:</span>08AM – 22PM</p>
-                            </div>
+        <!-- cart main wrapper start -->
+        <div class="cart-main-wrapper pt-60 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Cart Table Area -->
+                        <div class="cart-table table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="pro-thumbnail">Thumbnail</th>
+                                        <th class="pro-title">Product</th>
+                                        <th class="pro-price">Price</th>
+                                        <th class="pro-quantity">Quantity</th>
+                                        <th class="pro-subtotal">Total</th>
+                                        <th class="pro-remove">Remove</th>
+                                        <th class="pro-remove">Track</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid"
+                                                    src="assets/img/product/product-1.jpg" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="#">Endeavor Daytrip</a></td>
+                                        <td class="pro-price"><span>$295.00</span></td>
+                                        <td class="pro-quantity">
+                                            <!-- <div class="pro-qty"><input type="text" value="1"></div> -->
+                                            <span>1</span>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$295.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td><button class="pro-track" data-toggle="modal"
+                                                data-target="#quick_view"><span data-toggle="tooltip"
+                                                    title="Track Your Order">Track</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid"
+                                                    src="assets/img/product/product-2.jpg" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="#">Joust Duffle Bags</a></td>
+                                        <td class="pro-price"><span>$275.00</span></td>
+                                        <td class="pro-quantity">
+                                            <span>1</span>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$550.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td><button class="pro-track" data-toggle="modal"
+                                                data-target="#quick_view"><span data-toggle="tooltip"
+                                                    title="Track Your Order">Track</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid"
+                                                    src="assets/img/product/product-3.jpg" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="#">Compete Track Totes</a></td>
+                                        <td class="pro-price"><span>$295.00</span></td>
+                                        <td class="pro-quantity">
+                                            <span>1</span>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$295.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td><button class="pro-track" data-toggle="modal"
+                                                data-target="#quick_view"><span data-toggle="tooltip"
+                                                    title="Track Your Order">Track</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img class="img-fluid"
+                                                    src="assets/img/product/product-4.jpg" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="#">Bess Yoga Shorts</a></td>
+                                        <td class="pro-price"><span>$110.00</span></td>
+                                        <td class="pro-quantity">
+                                            <span>1</span>
+                                        </td>
+                                        <td class="pro-subtotal"><span>$110.00</span></td>
+                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td><button class="pro-track" data-toggle="modal"
+                                                data-target="#quick_view"><span data-toggle="tooltip"
+                                                    title="Track Your Order">Track</span></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- contact area end -->
 
-        <!-- map area start -->
-        <div class="map-area-wrapper">
-            <div id="map_content" data-lat="22.308155" data-lng="70.800705" data-zoom="6" data-maptitle="Company Name"
-                data-mapaddress="Rajkot">
             </div>
         </div>
-        <!-- map area end -->
+        <!-- cart main wrapper end -->
     </main>
     <!-- main wrapper end -->
 
@@ -394,7 +452,8 @@
                                         <p>Subscribe to the Kavir mailing list to receive updates on new arrivals,
                                             special offers and other discount information.</p>
                                         <form id="mc-form">
-                                            <input type="email" id="mc-email" autocomplete="off" placeholder="Your email address">
+                                            <input type="email" id="mc-email" autocomplete="off"
+                                                placeholder="Your email address">
                                             <button id="mc-submit"><i class="ion-paper-airplane"></i>subscribe</button>
                                         </form>
                                         <!-- mailchimp-alerts Start -->
@@ -420,7 +479,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="copyright-text text-center text-md-left">
-                            <p>© 2021 <b>Selena</b> Made with <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/">HasThemes</a></p>
+                            <p>© 2021 <b>Selena</b> Made with <i class="fa fa-heart text-danger"></i> by <a
+                                    href="https://hasthemes.com/">HasThemes</a></p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -452,5 +512,6 @@
 </body>
 
 
-<!-- Mirrored from htmldemo.hasthemes.com/selena/selena/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 10:23:33 GMT -->
+<!-- Mirrored from htmldemo.hasthemes.com/selena/selena/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Feb 2021 10:23:30 GMT -->
+
 </html>

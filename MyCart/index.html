@@ -13,7 +13,7 @@
     <meta name="description" content="meta description">
     <title>SuperMart</title>
 
-    
+
     <!--=== All Plugins CSS ===-->
     <link href="assets/css/plugins.css" rel="stylesheet">
     <!--=== All Vendor CSS ===-->
@@ -61,8 +61,31 @@
             transform: rotate(40deg);
         }
 
+        #shopname {
+            font-size: 1.5vw;
+            color: black;
+            font-weight: bold;
+        }
+
+        #aboutshop {
+            font-size: 1vw;
+            color: black;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 576px) {
+            #shopname {
+                font-size: 5vw;
+            }
+
+            #aboutshop {
+                font-size: 4vw;
+            }
+        }
+
         .card-body {
             position: relative;
+            padding: 1rem;
         }
 
         .card-All .d-flex:hover {
@@ -114,9 +137,10 @@
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="myaccount">
                                                     <a class="dropdown-item" href="my-account.html">my account</a>
-                                                    <a class="dropdown-item" href="order-history.html">order history</a>
-                                                    <a class="dropdown-item" href="login-register.html"> login</a>
-                                                    <a class="dropdown-item" href="login-register.html">register</a>
+                                                    <a class="dropdown-item" href="track-order.html">track order</a>
+                                                    <a class="dropdown-item" href="login-register.html">
+                                                        login/register</a>
+                                                    <a class="dropdown-item" href="login-register.html">logout</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -289,11 +313,10 @@
                                 </div>
                                 <div class="w-50 card-body">
                                     <p class="s-status">Available</p>
-                                    <h4 class="card-title">Mahavir Store</h4>
+                                    <p id="shopname" class="card-title">Mahavir Store</p>
                                     <hr style="margin-top: 0;">
-                                    <h6 class="card-text">Grocery Store</h6>
-                                    <h6 class="card-text">Total Items : 10</h6>
-
+                                    <p id="aboutshop" class="card-text">Grocery Store</p>
+                                    <p id="aboutshop" class="card-text">Total Items : 10</p>
                                 </div>
                             </div>
                         </div>
