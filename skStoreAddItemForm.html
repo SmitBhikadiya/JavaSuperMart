@@ -14,7 +14,7 @@
     <title>Store Registration</title>
 
     <style>
-        .jumboLink:hover{
+        .jumboLink:hover {
             text-decoration: none;
         }
     </style>
@@ -90,7 +90,7 @@
                     <h4>Added Items</h4>
                 </div>
                 <div class="card-body text-center">
-                    <table class="table">
+                    <table class="table" id="table-responsive">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
@@ -136,7 +136,17 @@
             </div>
         </div>
     </div>
-    </div>
+
+    <script>
+        window.addEventListener('resize',function(){
+            if ($(window).width() < 550) {
+                $("#table-responsive").addClass('table-responsive');
+            }
+            else{
+                $("#table-responsive").removeClass('table-responsive');
+            }
+        });
+    </script>
 
     <script src="static/bootstrap/javascript.min.js"></script>
     <script src="static/js/skDashboard.js"></script>

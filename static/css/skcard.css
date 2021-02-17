@@ -6,7 +6,7 @@
 .skcard-header{
     background-color: rgba(100, 148, 237, 0.185);
     color: rgb(0, 0, 0);
-    border: 1px solid cornflowerblue;
+    border: 1px solid #6495ed;
 }
 .skcard-header-number,.skcard-header-cinfo div{ 
     display: flex;

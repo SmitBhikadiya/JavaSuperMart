@@ -21,6 +21,43 @@
 
 <body>
 
+    <img src="static/img/top.png" onclick="topFunction()" id="myBtn" title="Go to top" width="50px" alt="">
+
+    <!-- Shop keeper modal start -->
+    <div class="modal" id="quick_view">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop keeper modal end -->
+
+    <!-- Product view modal start -->
+    <div class="modal" id="product_view">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product view modal end -->
+
+
     <div class="jumbotron text-center" style="margin-bottom:0">
         <h1>Welcome, Smit Bhikadiya</h1>
         <p>sbhikadiya892@gmail.com</p>
@@ -31,7 +68,7 @@
             <a href="skStoreRegistration.html" class="text-light">Your Store</a>
         </div>
         <div class="">
-            <a href="#page2" class="text-light">Remaining Order: <span class="nuberoforder">3</span></a>
+            <a href="#page2" class="text-light">Pending Order: <span class="nuberoforder">3</span></a>
         </div>
         <div class="">
             <a href="#page3" class="text-light">Orders History: <span class="nuberoforder">1</span></a>
@@ -47,7 +84,7 @@
     <!--All remaining Orders-->
     <section id="page2" class="page mt-3">
 
-        <div class="card">
+        <div class="card" >
             <div class="card-header text-center">
                 <h4>Pending Orders</h4>
             </div>
@@ -56,14 +93,18 @@
                     <div class="skcard-header row">
                         <div class="skcard-header-number col-sm-1">1</div>
                         <div class="skcard-header-cinfo col-sm-11">
-                            <div>Customer Information:-<a href="#">Smit Dhaneshbhai Bhikadiya</a></div>
+                            <div>Customer Information:-
+                                <a href="#" class="" data-toggle="modal"
+                                data-target="#quick_view">
+                                Smit Dhaneshbhai Bhikadiya</a>
+                            </div>
                             <div>Address: Shantinagar, GadhadaRoad, Botad</div>
                         </div>
                     </div>
-                    <div class="skcard-body row">
+                    <div class="skcard-body row" style="overflow:scroll;">
                         <div class="skcard-itemsection col-sm-12">
                             <div class="card-table">
-                                <table class="table">
+                                <table class="table" id="table-responsive">
                                     <thead class="thead">
                                         <tr>
                                             <th scope="col">Iimg</th>
@@ -77,7 +118,11 @@
                                     <tbody class="tbody">
                                         <tr>
                                             <td><img class="oimg" src="static/img/apple.png" alt="apple"></td>
-                                            <td> <a href="#">Apple</a></td>
+                                            <td> 
+                                                <a href="#" class="" data-toggle="modal"
+                                                data-target="#product_view">
+                                                Apple</a>
+                                            </td>
                                             <td>50/kg</td>
                                             <td>4</td>
 
@@ -86,7 +131,11 @@
                                         </tr>
                                         <tr>
                                             <td> <img class="oimg" src="static/img/banana.png" alt=""> </td>
-                                            <td> <a href="#">Banana</a> </td>
+                                            <td> <a href="#">Banana</a> 
+                                                <a href="#" class="" data-toggle="modal"
+                                                data-target="#product_view">
+                                                Banana</a>
+                                            </td>
                                             <td>65/dozen</td>
                                             <td>2</td>
 
@@ -95,7 +144,11 @@
                                         </tr>
                                         <tr>
                                             <td> <img class="oimg" src="static/img/grapes.png" alt=""> </td>
-                                            <td> <a href="#">Graps </a> </td>
+                                            <td> <a href="#">Graps </a> 
+                                                <a href="#" class="" data-toggle="modal"
+                                                data-target="#product_view">
+                                                Graps</a>
+                                            </td>
                                             <td>70/kg</td>
                                             <td>1</td>
 
@@ -141,10 +194,10 @@
                             <div>Address: Shantinagar, GadhadaRoad, Botad</div>
                         </div>
                     </div>
-                    <div class="skcard-body row">
+                    <div class="skcard-body row" style="overflow:scroll;">
                         <div class="skcard-itemsection col-sm-12">
                             <div class="card-table">
-                                <table class="table">
+                                <table class="table " id="table-responsive">
                                     <thead class="thead">
                                         <tr>
                                             <th scope="col">Iimg</th>
@@ -194,7 +247,6 @@
                         </div>
                     </div>
                     <div class="skcard-actions row  d-flex justify-content-center align-item-center">
-
                         <select name="aprox time" id="" class="form-control mb-2" required>
                             <option value="0">Time for Delivering</option>
                             <option value="00:15">00:15 hour</option>
@@ -222,9 +274,9 @@
             <div class="card-header text-center">
                 <h4>Orders History</h4>
             </div>
-            <div style="height:100vh;overflow:scroll;">
+            <div style="height:50vh;overflow:scroll;">
                 <div class="card-body text-center">
-                    <table class="table">
+                    <table class="table " id="table-responsive">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Items Id</th>
@@ -255,8 +307,43 @@
         </div>
     </section>
 
+    <script>
+        
+        window.addEventListener('resize',function(){
+            if ($(window).width() < 550) {
+                $("#table-responsive").addClass('table-responsive');
+            }
+            else{
+                $("#table-responsive").removeClass('table-responsive');
+            }
+        });
+    
+
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
     <!-- External JS -->
     <script src="static/js/skDashboard.js"></script>
+    <script src="MyCart/assets/js/vendor.js"></script>
+    
 </body>
 
 </html>
