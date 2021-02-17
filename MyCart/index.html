@@ -42,6 +42,7 @@
             border-radius: 10px;
             box-shadow: 0 0 5px black;
             margin-top: 10px;
+            margin-bottom: 20px;
             padding: 8px 8px;
         }
 
@@ -93,6 +94,15 @@
             text-align: center;
             transform: rotate(40deg);
         }
+        .shop-info{
+            display: flex;
+        }
+        .shop-status{
+            display: none;
+        }
+        .shop-btn{
+            display: none;
+        }
 
         @media screen and (max-width: 492px) {
             div.main1 {
@@ -120,6 +130,14 @@
 
             div.text-container1 hr {
                 width: 80%;
+            }
+            .shop-status{
+                display: block;
+            }
+            .shop-btn{
+                display: block;
+                width: 100%;
+                margin-top: 10px;
             }
         }
     </style>
@@ -333,45 +351,57 @@
 
                     <div class="shoplist">
                         
-                        <div class="main1" onclick="location.href='contact.html';">
+                        <div class="main1" onclick="location.href='';">
                             <div class="container1">
                                 <div class="imag1">
                                     <img src="assets/img/offer-1.jpg" style="height: 100%;" class="card-img" alt="...">
                                 </div>
                                 <div class="text-container1">
                                     <p class="s-status">Available</p>
-                                    <h4 class="card-title">Mahavir Store</h4>
+                                    <div class="shop-info">
+                                        <h4 class="card-title">Shree Mahavir genral Store</h4>
+                                        <img class="shop-status" src="assets/img/open.png" width="20%" height="20%" alt="">
+                                    </div>
                                     <hr style="margin-top: 0;">
                                     <h6 class="card-text">Grocery Store</h6>
                                     <h6 class="card-text">Total Items : 10</h6>
+                                    <a href="#" class="btn btn-success text-white shop-btn">Shop Now</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="main1" onclick="location.href='contact.html';">
+                        <div class="main1" onclick="location.href='';">
                             <div class="container1">
                                 <div class="imag1">
                                     <img src="assets/img/offer-1.jpg" style="height: 100%;" class="card-img" alt="...">
                                 </div>
                                 <div class="text-container1">
                                     <p class="s-status" style="background-color: red;">Close</p>
-                                    <h4 class="card-title">Mahavir Store</h4>
+                                    <div class="shop-info">
+                                        <h4 class="card-title">Shree Mahavir genral Store</h4>
+                                        <img class="shop-status" src="assets/img/closed.png" width="20%" height="20%" alt="">
+                                    </div>
                                     <hr style="margin-top: 0;">
                                     <h6 class="card-text">Grocery Store</h6>
                                     <h6 class="card-text">Total Items : 10</h6>
+                                    <a href="#" class="btn btn-success text-white shop-btn">Shop Now</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="main1" onclick="location.href='contact.html';">
+                        <div class="main1" onclick="location.href='';">
                             <div class="container1">
                                 <div class="imag1">
                                     <img src="assets/img/offer-1.jpg" style="height: 100%;" class="card-img" alt="...">
                                 </div>
                                 <div class="text-container1">
                                     <p class="s-status">Available</p>
-                                    <h4 class="card-title">Mahavir Store</h4>
+                                    <div class="shop-info">
+                                        <h4 class="card-title">Shree Mahavir genral Store</h4>
+                                        <img class="shop-status" src="assets/img/open.png" width="20%" height="20%" alt="">
+                                    </div>
                                     <hr style="margin-top: 0;">
                                     <h6 class="card-text">Grocery Store</h6>
                                     <h6 class="card-text">Total Items : 10</h6>
+                                    <a href="#" class="btn btn-success text-white shop-btn">Shop Now</a>
                                 </div>
                             </div>
                         </div>
