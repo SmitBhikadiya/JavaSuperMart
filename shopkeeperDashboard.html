@@ -13,7 +13,7 @@
     <title>Document</title>
 
     <style>
-        .jumboLink:hover{
+        .jumboLink:hover {
             text-decoration: none;
         }
     </style>
@@ -25,15 +25,34 @@
 
     <!-- Shop keeper modal start -->
     <div class="modal" id="quick_view">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-sm modal-md modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-                        
+                    <!-- product details inner end -->
+                    <div class="product-details-inner pl-4">
+                        <h1 class="text-center mb-3"
+                            style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                            About Shop Keeper</h1>
+                        <hr style="background-color:black;opacity: 0.5;" width="90%">
+                        <div class="row px-5 ">
+                            <div class="col-lg-5 col-md-6">
+                                <img src="static/img/profile.jpeg" width="95%" alt="">
+                            </div>
+                            <div class="col-lg-7 col-md-6 py-5"
+                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <h3>Name :</h3>
+                                <h5>Smit Dhaneshbhai Bhikadiya</h5>
+                                <h3>Address :</h3>
+                                <h5>Shantinagar, GadhadaRoad, Botad</h5>
+                                <h3>Phone :</h3>
+                                <h5>+91 846 911 6765</h5>
+                            </div>
+                        </div>
                     </div>
+                    <!-- product details inner end -->
                 </div>
             </div>
         </div>
@@ -42,15 +61,34 @@
 
     <!-- Product view modal start -->
     <div class="modal" id="product_view">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-sm modal-md modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-                        
+                    <!-- product details inner end -->
+                    <div class="product-details-inner pl-4">
+                        <h1 class="text-center mb-3"
+                            style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                            About Item</h1>
+                        <hr style="background-color:black;opacity: 0.5;" width="90%">
+                        <div class="row px-5 ">
+                            <div class="col-lg-5 col-md-6">
+                                <img src="static/img/apple.png" width="95%" alt="">
+                            </div>
+                            <div class="col-lg-7 col-md-6 py-2"
+                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <h3>Item Name :</h3>
+                                <h5>Apple</h5>
+                                <h3>Price :</h3>
+                                <h5>$45</h5>
+                                <h3>Total Quantity :</h3>
+                                <h5>30 Item</h5>
+                            </div>
+                        </div>
                     </div>
+                    <!-- product details inner end -->
                 </div>
             </div>
         </div>
@@ -84,7 +122,7 @@
     <!--All remaining Orders-->
     <section id="page2" class="page mt-3">
 
-        <div class="card" >
+        <div class="card">
             <div class="card-header text-center">
                 <h4>Pending Orders</h4>
             </div>
@@ -94,9 +132,8 @@
                         <div class="skcard-header-number col-sm-1">1</div>
                         <div class="skcard-header-cinfo col-sm-11">
                             <div>Customer Information:-
-                                <a href="#" class="" data-toggle="modal"
-                                data-target="#quick_view">
-                                Smit Dhaneshbhai Bhikadiya</a>
+                                <a href="#" class="" data-toggle="modal" data-target="#quick_view">
+                                    Smit Dhaneshbhai Bhikadiya</a>
                             </div>
                             <div>Address: Shantinagar, GadhadaRoad, Botad</div>
                         </div>
@@ -105,7 +142,7 @@
                         <div class="skcard-itemsection col-sm-12">
                             <div class="card-table">
                                 <table class="table" id="table-responsive">
-                                    <thead class="thead">
+                                    <thead class="thead text-center">
                                         <tr>
                                             <th scope="col">Iimg</th>
                                             <th scope="col">Iname</th>
@@ -115,13 +152,12 @@
                                             <th scope="col">Mark as Available</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="tbody">
+                                    <tbody class="tbody text-center">
                                         <tr>
                                             <td><img class="oimg" src="static/img/apple.png" alt="apple"></td>
-                                            <td> 
-                                                <a href="#" class="" data-toggle="modal"
-                                                data-target="#product_view">
-                                                Apple</a>
+                                            <td>
+                                                <a href="#" class="" data-toggle="modal" data-target="#product_view">
+                                                    Apple</a>
                                             </td>
                                             <td>50/kg</td>
                                             <td>4</td>
@@ -131,10 +167,9 @@
                                         </tr>
                                         <tr>
                                             <td> <img class="oimg" src="static/img/banana.png" alt=""> </td>
-                                            <td> <a href="#">Banana</a> 
-                                                <a href="#" class="" data-toggle="modal"
-                                                data-target="#product_view">
-                                                Banana</a>
+                                            <td> <a href="#">Banana</a>
+                                                <a href="#" class="" data-toggle="modal" data-target="#product_view">
+                                                    Banana</a>
                                             </td>
                                             <td>65/dozen</td>
                                             <td>2</td>
@@ -144,10 +179,9 @@
                                         </tr>
                                         <tr>
                                             <td> <img class="oimg" src="static/img/grapes.png" alt=""> </td>
-                                            <td> <a href="#">Graps </a> 
-                                                <a href="#" class="" data-toggle="modal"
-                                                data-target="#product_view">
-                                                Graps</a>
+                                            <td> <a href="#">Graps </a>
+                                                <a href="#" class="" data-toggle="modal" data-target="#product_view">
+                                                    Graps</a>
                                             </td>
                                             <td>70/kg</td>
                                             <td>1</td>
@@ -198,7 +232,7 @@
                         <div class="skcard-itemsection col-sm-12">
                             <div class="card-table">
                                 <table class="table " id="table-responsive">
-                                    <thead class="thead">
+                                    <thead class="thead text-center">
                                         <tr>
                                             <th scope="col">Iimg</th>
                                             <th scope="col">Iname</th>
@@ -208,7 +242,7 @@
                                             <th scope="col">Mark as Available</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="tbody">
+                                    <tbody class="tbody text-center">
                                         <tr>
                                             <td><img class="oimg" src="static/img/apple.png" alt="apple"></td>
                                             <td> <a href="#">Apple</a></td>
@@ -277,7 +311,7 @@
             <div style="height:50vh;overflow:scroll;">
                 <div class="card-body text-center">
                     <table class="table " id="table-responsive">
-                        <thead class="thead-dark">
+                        <thead class="thead-dark text-center">
                             <tr>
                                 <th scope="col">Items Id</th>
                                 <th scope="col">Items Name</th>
@@ -289,7 +323,7 @@
                                 <th scope="col">View Bill</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Banana</td>
@@ -308,42 +342,42 @@
     </section>
 
     <script>
-        
-        window.addEventListener('resize',function(){
+
+        window.addEventListener('resize', function () {
             if ($(window).width() < 550) {
                 $("#table-responsive").addClass('table-responsive');
             }
-            else{
+            else {
                 $("#table-responsive").removeClass('table-responsive');
             }
         });
-    
+
 
         //Get the button
         var mybutton = document.getElementById("myBtn");
-        
+
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
+        window.onscroll = function () { scrollFunction() };
+
         function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-        
+
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
-        </script>
+    </script>
 
     <!-- External JS -->
     <script src="static/js/skDashboard.js"></script>
     <script src="MyCart/assets/js/vendor.js"></script>
-    
+
 </body>
 
 </html>
