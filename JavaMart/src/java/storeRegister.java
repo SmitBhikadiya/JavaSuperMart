@@ -47,7 +47,7 @@ public class storeRegister extends HttpServlet {
 
             Part part = request.getPart("strimg");
 
-            out.println(uploadImg(part, sName, "profileImg"));
+            out.println(uploadImg(part, sName, "profileImg\\"));
 
         }
     }
@@ -114,7 +114,7 @@ public class storeRegister extends HttpServlet {
         }
         in.close();
         ou.close();
-        return "Uploaded";
+        return "Uploaded On "+imgrelpath;
     }
 
 }
