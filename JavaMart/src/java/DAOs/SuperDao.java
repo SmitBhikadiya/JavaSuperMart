@@ -35,7 +35,7 @@ public class SuperDao {
     }
     
     /* for user registration */
-    public static PojoRegistration getById(int id) throws SQLException{   
+    public static PojoRegistration getUserById(int id) throws SQLException{   
        PojoRegistration pojo = new PojoRegistration(); 
         conn = getConnection();
         
@@ -66,7 +66,7 @@ public class SuperDao {
     }
     
     /* for user registration */
-    public static int insert(PojoRegistration pojo) throws SQLException{
+    public static int insertUser(PojoRegistration pojo) throws SQLException{
         int status = 5;
         conn = getConnection();
         // prepared statement to insert data into the table
@@ -122,7 +122,42 @@ public class SuperDao {
     }
     
     /* for image upload */
-    public static void insert(pojoImg pojo){
+    public static int insertImg(PojoImg pojo) throws SQLException{
+        String sql = "INSERT INTO images (imgname, imgsize, imgtype) VALUES (?,?,?)";
+        conn = getConnection();
+        int insertedrow = 0;
+        try {
+            PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
+            st.setString(1, pojo.getImgname());
+            st.setInt(2, pojo.getImgsize());
+            st.setString(3, pojo.getImgtype());
+            insertedrow = st.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(SuperDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            conn.close();
+        }
+        return insertedrow;
+    }
+
+    /* for image upload */
+    public static boolean alreadyUploaded(String string) throws SQLException {
+        boolean is = false;
+        conn = getConnection();
+        String sql = "SELECT imgid FROM images WHERE imgname=?";
+        try {
+            PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
+            st.setString(1, string);
+            ResultSet set = st.executeQuery();
+            if(set.first()){
+                is = true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SuperDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            conn.close();
+        }
         
+        return is;
     }
 }

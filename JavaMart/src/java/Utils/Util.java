@@ -6,5 +6,8 @@
 package Utils;
 
 public class Util {
-    public static final String imgpath = "/static/img/profileImg/";
+    public static final String profileImgPath = "./static/img/profileImg/";
+    public static final String imgPath = "./static/img/";
+    public static final String profileFold = "profileImg\\";
+    public static final String imgFold = "";
 }

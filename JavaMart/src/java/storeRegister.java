@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
+import DAOs.SuperDao;
+import POJOs.PojoImg;
 import Utils.Util;
-import com.sun.glass.ui.Application;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import javafx.scene.shape.Shape;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -45,20 +45,34 @@ public class storeRegister extends HttpServlet {
             String openat = request.getParameter("openat");
             String closeat = request.getParameter("closeat");
 
+            /* recieve image and store into the relative path */
             Part part = request.getPart("strimg");
+            /* images information */
             int imgsize = (int) part.getSize();
             String imgtype = part.getContentType();
-            out.println(imgsize/1024+"KB<br>");
-            out.println(imgtype+"<br>");
-            String loc = "profileImg\\";
-            out.println(uploadImg(part, sName, loc));
+            String imgname = (sName+sContact+".png").toUpperCase();
+            String loc = Util.profileFold;
+            out.println(uploadImg(part, sName+sContact, loc));
+            
+            
+            /* upload img to the database */
+            PojoImg pojo = new PojoImg(imgname,imgsize,imgtype);
+            if(!SuperDao.alreadyUploaded(imgname)){
+                int i = SuperDao.insertImg(pojo);
+            }
+            else{
+                out.println("Image are uploaded already");
+            }
             
             // show upload img image
             //out.println("<img src='./static/img/"+loc.replaceAll("//","")+"/"+sName+".png'></img>");//+loc.replaceAll("\\", "")+"'></img>");
-
+            //out.println("<img src='"+Util.ImgPath+"/top.png'>");
+            
             // add all data to the database
             
             
+        } catch (SQLException ex) {
+            Logger.getLogger(storeRegister.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -113,7 +127,7 @@ public class storeRegister extends HttpServlet {
         if (!(new File(imgrelpath).exists())) {
             return "Path Not Found!";
         }
-        imgrelpath = imgrelpath.replace("\\build", "") + filename + ".png";
+        imgrelpath = imgrelpath.replace("\\build", "") + filename;
 
         // upload file into given path
         OutputStream ou = new FileOutputStream(imgrelpath);//imgrelpath+"DB1.png");

@@ -11,9 +11,9 @@
     } else {
         // get user information if login
         String id = session.getAttribute("userid").toString();
-        pojo = SuperDao.getById(Integer.parseInt(id));
+        pojo = SuperDao.getUserById(Integer.parseInt(id));
     }
-%>
+%>  
 <!DOCTYPE html>
 <html lang="en">
     

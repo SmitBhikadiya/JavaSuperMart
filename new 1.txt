@@ -1,62 +1,72 @@
 --> Databse: MyStore
 --> tables:
 	-> customers
-		-> customerId (primary key)
-		-> customerName
-		-> customerEmail
-		-> customerMobile
-		-> customerAddress
-		-> customerPassword
+		-> cstmid (p)
+		-> cstmname
+		-> cstmemail
+		-> cstmmobile
+		-> cstmaddress
+		-> cstmpassword
+		-> cstmupdatedtime
 		
 	-> shopkeepers
-		-> shopkeeperId (primary key)
-		-> storeId (foreign key)
-		-> shopKName
-		-> shopKEmail
-		-> shopKMobile
-		-> shopKAddress
-		-> shopKPassword
+		-> skid (p)
+		-> strid (f)
+		-> skname
+		-> skemail
+		-> skmobile
+		-> skaddress
+		-> skpassword
+		-> skupdatedtime
 	
 	-> stores
-		-> storeId (primary key)
-		-> shopkeeperId (foreign key)
-		-> imgId (foreign key)
-		-> storeName
-		-> storeAddress
-		-> storeOpeningTime
-		-> storeClosingTime
-		-> whichTypeOfStore
-		-> ratings
+		-> strid (p)
+		-> skid (f)
+		-> imgid (f)
+		-> strname
+		-> straddress
+		-> stropentime
+		-> strclosetime
+		-> strtype
+		-> isopen // 0 for close and 1 for open
+		-> strhavingserviser
+		-> strupdatedtime
 		
-	-> items
-		-> itemId (primary key)
-		-> storeId (foreign key)
-		-> imgId (foreign key)
-		-> itemName
-		-> itemPrize
-		-> itemDiscount
-		-> itemTotalQty
+	-> products
+		-> prdid (p)
+		-> strid (f)
+		-> imgid (f)
+		-> prdname
+		-> prdprize
+		-> prdunit
+		-> prddiscount
+		-> prdtotalqty
+		-> prdupdatedtime
 		
 	-> orders
-		-> orderId (primary key)
-		-> itemsId (foreign key)
-		-> customerId (foreign key)
-		-> orderStatus
-		-> ordersArrivalTime
-		-> orderGenreatedTime
+		-> ordid (p)
+		-> prdid (f)
+		-> strid (f)
+		-> cstmid (f)
 
-	-> Tracks
-		-> trkId (primary key)
-		-> ordId (foreign key)
-		-> status
-		
+	-> orderstatus
+		-> ordstsid
+		-> ordid (f)
+		-> ordstatus // 0 = addtocart default, 1 = when purched the order, 2 = order completed
+		-> ordarrivalat // default null  
+		-> deliverytime // default null, set deliverytime
+		-> acceptstatus // default null, 0 = canshopkeeperaccept, 1 = canserviseraccept
+		-> acceptedby // default null, name of serviser
 		
 	-> servicer
-		-> serviserId
-		-> orderId
-		-> serviserName
-		-> serviserMobile
-		-> serviserStatus
+		-> serviserid
+		-> ordid
+		-> servisername
+		-> servisermobile
+		-> serviseremail
+		-> serviserpassword
+		-> serviseraddress
+		-> available
 
 	-> Images
 		->imgId

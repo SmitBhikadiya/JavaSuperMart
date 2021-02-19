@@ -49,7 +49,7 @@ public class signUp extends HttpServlet {
             
             PojoRegistration pojo = new PojoRegistration(uname, utype, uemail, umobile, upwd, uaddress);
             try {
-                SuperDao.insert(pojo);
+                SuperDao.insertUser(pojo);
                 HttpSession session = request.getSession();
                 session.removeAttribute("username");
                 response.sendRedirect("userSignIn.jsp?email="+pojo.getUserEmail());
