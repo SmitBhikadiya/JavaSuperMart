@@ -20,9 +20,9 @@
 	-> stores
 		-> storeId (primary key)
 		-> shopkeeperId (foreign key)
+		-> imgId (foreign key)
 		-> storeName
 		-> storeAddress
-		-> storeImgPath
 		-> storeOpeningTime
 		-> storeClosingTime
 		-> whichTypeOfStore
@@ -31,10 +31,10 @@
 	-> items
 		-> itemId (primary key)
 		-> storeId (foreign key)
+		-> imgId (foreign key)
 		-> itemName
 		-> itemPrize
 		-> itemDiscount
-		-> itemImagePath
 		-> itemTotalQty
 		
 	-> orders
@@ -57,5 +57,9 @@
 		-> serviserName
 		-> serviserMobile
 		-> serviserStatus
+
+	-> Images
+		->imgId
+		->imgName
 	
 
