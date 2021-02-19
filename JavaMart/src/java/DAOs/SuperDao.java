@@ -5,7 +5,7 @@
  */
 package DAOs;
 
-import POJOs.PojoRegistration;
+import POJOs.*;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.DriverManager;
@@ -34,6 +34,7 @@ public class SuperDao {
         return conn;
     }
     
+    /* for user registration */
     public static PojoRegistration getById(int id) throws SQLException{   
        PojoRegistration pojo = new PojoRegistration(); 
         conn = getConnection();
@@ -64,6 +65,7 @@ public class SuperDao {
         return pojo;
     }
     
+    /* for user registration */
     public static int insert(PojoRegistration pojo) throws SQLException{
         int status = 5;
         conn = getConnection();
@@ -86,6 +88,7 @@ public class SuperDao {
         return status;
     }
     
+    /* for user registration */
     public static PojoRegistration userAuth(String email,String pwd) throws SQLException{
         PojoRegistration pojo = new PojoRegistration(); 
         conn = getConnection();
@@ -116,5 +119,10 @@ public class SuperDao {
         }
         
         return pojo;
+    }
+    
+    /* for image upload */
+    public static void insert(pojoImg pojo){
+        
     }
 }

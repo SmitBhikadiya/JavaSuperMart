@@ -46,9 +46,19 @@ public class storeRegister extends HttpServlet {
             String closeat = request.getParameter("closeat");
 
             Part part = request.getPart("strimg");
+            int imgsize = (int) part.getSize();
+            String imgtype = part.getContentType();
+            out.println(imgsize/1024+"KB<br>");
+            out.println(imgtype+"<br>");
+            String loc = "profileImg\\";
+            out.println(uploadImg(part, sName, loc));
+            
+            // show upload img image
+            //out.println("<img src='./static/img/"+loc.replaceAll("//","")+"/"+sName+".png'></img>");//+loc.replaceAll("\\", "")+"'></img>");
 
-            out.println(uploadImg(part, sName, "profileImg\\"));
-
+            // add all data to the database
+            
+            
         }
     }
 
@@ -114,7 +124,7 @@ public class storeRegister extends HttpServlet {
         }
         in.close();
         ou.close();
-        return "Uploaded On "+imgrelpath;
+        return imgrelpath;
     }
 
 }
