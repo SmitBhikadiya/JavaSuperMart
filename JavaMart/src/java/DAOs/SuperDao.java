@@ -160,4 +160,10 @@ public class SuperDao {
         
         return is;
     }
+    
+    
+    /* for store registration */
+    public static void inserStore(PojoStores pojo){
+        
+    }
 }

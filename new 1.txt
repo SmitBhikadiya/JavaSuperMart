@@ -4,7 +4,7 @@
 		-> cstmid (p)
 		-> cstmname
 		-> cstmemail
-		-> cstmmobile
+		-> cstmcontact
 		-> cstmaddress
 		-> cstmpassword
 		-> cstmupdatedtime
@@ -14,7 +14,7 @@
 		-> strid (f)
 		-> skname
 		-> skemail
-		-> skmobile
+		-> skcontact
 		-> skaddress
 		-> skpassword
 		-> skupdatedtime
@@ -24,11 +24,11 @@
 		-> skid (f)
 		-> imgid (f)
 		-> strname
+		-> strcontact
 		-> straddress
 		-> stropentime
 		-> strclosetime
 		-> strtype
-		-> isopen // 0 for close and 1 for open
 		-> strhavingserviser
 		-> strupdatedtime
 		
@@ -45,31 +45,44 @@
 		
 	-> orders
 		-> ordid (p)
-		-> prdid (f)
 		-> strid (f)
 		-> cstmid (f)
+		-> paymentmethod
+		-> ordtotalbill
+
+	-> orderlist
+		-> ordlistid (p)
+		-> ordid (f)
+		-> prdid (f)
+		-> prdqty
+		-> prdtotalamount
 
 	-> orderstatus
-		-> ordstsid
+		-> ordstsid (p)
 		-> ordid (f)
 		-> ordstatus // 0 = addtocart default, 1 = when purched the order, 2 = order completed
-		-> ordarrivalat // default null  
+		-> ordarrivaltime // default null  
 		-> deliverytime // default null, set deliverytime
 		-> acceptstatus // default null, 0 = canshopkeeperaccept, 1 = canserviseraccept
 		-> acceptedby // default null, name of serviser
 		
 	-> servicer
-		-> serviserid
-		-> ordid
+		-> serviserid (p)
+		-> ordstsid (f)  
 		-> servisername
 		-> servisermobile
 		-> serviseremail
 		-> serviserpassword
 		-> serviseraddress
-		-> available
+		-> serviserstatus // default free, then busy
+		-> countorder // default = 0, max = 3
+		-> serviserupdatedtime
 
-	-> Images
-		->imgId
-		->imgName
+	-> images
+		-> imgid (p)
+		-> imgname
+		-> imgsize
+		-> imgtype
+		-> imgupdatedtime
 	
 
