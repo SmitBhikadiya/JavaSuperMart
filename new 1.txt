@@ -8,6 +8,13 @@
 		-> cstmaddress
 		-> cstmpassword
 		-> cstmupdatedtime
+
+	customers query:
+	-> SELECT * FROM customers // select data
+	-> SELECT * FROM customers WHERE cstmemail=? and cstmpassword=? // signin 
+	-> INSERT INTO customers (cstmname, cstmemail, cstmcontact, cstmaddress, cstmpassword) VALUES (?,?,?,?,?) // signup
+	-> UPDATE customers SET cstmname=?,cstmemail=?,cstmcontact=?, cstmaddress=?, cstmpassword=? WHERE cstmid = ? // update customers
+	-> SELECT cstmid FROM customers WHERE cstmemail=? // check customers already signup or not at registration time 
 		
 	-> shopkeepers
 		-> skid (p)
@@ -18,6 +25,15 @@
 		-> skaddress
 		-> skpassword
 		-> skupdatedtime
+
+	shopkeepers query:
+	-> SELECT * FROM shopkeepers // select data
+	-> SELECT * FROM shopkeepers WHERE skemail=? and skpassword=? // signin 
+	-> INSERT INTO shopkeepers (skname, skemail, skcontact, skaddress, skpassword) VALUES (?,?,?,?,?) // signup
+	-> UPDATE shopkeepers SET skname=?,skemail=?,skcontact=?, skaddress=?, skpassword=? WHERE skid = ? // update customers
+	-> INSERT INTO shopkeepers (strid) VALUES (?) // insert strore id
+	-> SELECT strid FROM shopkeepers WHERE skemail=? // check shopkeeper already signup or not at registration time 
+	
 	
 	-> stores
 		-> strid (p)
@@ -31,7 +47,13 @@
 		-> strtype
 		-> strhavingserviser
 		-> strupdatedtime
-		
+
+	stores query:
+	-> SELECT * FROM stores // get store all detailes
+	-> INSERT INTO stores (skid, strname, strcontact, straddress, stropentime, strclosetime, strtype, strhavingserviser) VALUES (?,?,?,?,?,?,?,?) // store registration
+	-> UPDATE stores SET strname=?, strcontact=?, straddress=?, stropentime=?, strclosetime=?, strtype=?, strhavingserviser=? WHERE strid=? // update store
+	-> SELECT strid FROM stores WHERE strname=? and straddress=? // check whether strore are not exists at same location with same name
+
 	-> products
 		-> prdid (p)
 		-> strid (f)
@@ -42,7 +64,17 @@
 		-> prddiscount
 		-> prdtotalqty
 		-> prdupdatedtime
+
+	-> SELECT * FROM products // get all products
+	-> INSERT INTO products (strid, prdname, prdprize, prdunit, prddiscount, prdtotalqty) VALUES (?,?,?,?,?,?) // insert products
+	-> UPDATE products SET prdname=?, prdprize=?, prdunit=?, prddiscount=?, prdtotalqty=? WHERE prdid=? // update product data
+	-> SELECT prdid FROM products WHERE prdname=? and prdprize=? // check whether product is already exists with same name and prize
+
+	-> addtocart
+		atcid (p)
+		cstmid (f)
 		
+
 	-> orders
 		-> ordid (p)
 		-> strid (f)
@@ -50,12 +82,22 @@
 		-> paymentmethod
 		-> ordtotalbill
 
+	-> SELECT * FROM orders // get records detailes 
+	-> INSERT INTO orders (strid, cstmid) VALUES (?,?) // after checking prditem exists in your orderlist it will create new order accordingly
+	-> UPDATE orders SET paymentmethod=?, ordtotalbill=? WHERE ordid=? // after order checkout for delivery it will update
+
+
 	-> orderlist
 		-> ordlistid (p)
 		-> ordid (f)
 		-> prdid (f)
 		-> prdqty
 		-> prdtotalamount
+
+	-> SELECT * FROM orderlist
+	-> INSERT INTO orderlist (prdid, prdqty, prdprize) 
+	-> SELECT ordid FROM orders WHERE ordid = (SELECT ordid FROM orders WHERE strid = (SELECT products.strid FROM products, orderlist WHERE orderlist.prdid=?)) WHERE cstmid=? // check strid of prdid  is equal strid of orders table then and then update ordid hear else at checkout time
+    -> UPDATE orderlist SET ordid = (SELECT ordid FROM orders WHERE ordid = (SELECT ordid FROM orders WHERE strid = (SELECT products.strid FROM products, orderlist WHERE orderlist.prdid=?)) WHERE cstmid=?) WHERE ordlistid = ?
 
 	-> orderstatus
 		-> ordstsid (p)
