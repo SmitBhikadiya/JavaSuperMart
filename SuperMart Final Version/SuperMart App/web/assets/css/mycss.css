@@ -1,0 +1,124 @@
+/*-------  shop card start -------*/
+.shoplist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.main1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 8px 8px;
+}
+
+div.container1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+}
+
+div.container1:hover {
+    box-shadow: 0 0 5px gray, 0 0 10px gray;
+}
+
+div.imag1 {
+    height: 217px;
+    width: 50%;
+}
+
+.imag1 img {
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+
+}
+
+div.imag1:hover {
+    transition: 0.8s;
+    transform: rotate(-2deg) scale(1.1);
+}
+
+div.text-container1 {
+    position: relative;
+    width: 50%;
+    padding-left: 15px;
+}
+
+.s-status {
+    position: relative;
+    background: rgb(97, 201, 97);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 180%;
+    padding-right: 50px;
+    text-align: center;
+    transform: rotate(60deg);
+}
+
+.shop-info {
+    display: flex;
+}
+
+.shop-status {
+    display: none;
+}
+
+.shop-btn {
+    display: none;
+}
+
+@media screen and (max-width: 492px) {
+    div.main1 {
+        margin: 5px 10px;
+    }
+
+    div.container1 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    div.imag1 {
+        width: 100%;
+    }
+
+    div.text-container1 {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    div.text-container1 .s-status {
+        display: none;
+    }
+
+    div.text-container1 hr {
+        width: 80%;
+    }
+
+    .shop-status {
+        display: block;
+    }
+
+    .shop-btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/*------- shop card end -------*/

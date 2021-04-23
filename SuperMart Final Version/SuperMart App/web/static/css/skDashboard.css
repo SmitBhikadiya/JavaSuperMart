@@ -1,0 +1,127 @@
+
+  
+/** Dashboard Design **/
+
+.nav{
+    position: relative;
+    display: flex;
+    background-color: #dc143cde;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (max-width:834px){
+    .nav{
+        flex-direction: column;
+    }
+}
+
+.nav a:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-width:450px){
+    .nav{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .nav div{
+        padding-left: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+.nav a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/** shop keeper card view info.. **/
+.shopkeeperInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px auto;
+}
+.card-left{
+  margin-right: 10px;  
+}
+
+/** section page common **/
+
+.page5{
+    margin: 0;
+    position: relative;
+    background-color: rgba(224, 224, 224, 0.233);
+    height: 50vh;
+}
+
+#registerBtn{
+    display: block;
+    border: 4px dotted rgb(0, 0, 0);
+    border-radius: 20px;
+    font-family: cursive;
+    font-size:30px;
+    padding: 30px;
+    background: none;
+    outline: none;
+}
+
+#registerLink:hover{
+    text-decoration: none;
+}
+
+.width5center{
+    width: 50%;
+    margin: 10px auto;
+}
+.width7center{
+    width: 70%;
+    margin: 10px auto;
+}
+.width9center{
+    width: 90%;
+    margin: 10px auto;
+}
+
+@media screen and (max-width:1000px){
+    .width5center{
+        width:70%;
+    }
+    .width7center{
+        width: 90%;
+    }
+    .width9center{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:690px){
+    .width5center{
+        width:90%;
+    }
+}
+
+#storeItemsRegistration{
+    height: 200%;
+}
+
+.table{
+    overflow: scroll;
+}
+
+tr kbd{
+    font-size: 20px;
+    padding: 5px;
+    font-family: cursive;
+}
+
+
+.nuberoforder{
+    background-color: rgb(0, 0, 0);
+    padding: 2px 7px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    margin-left: 2px;
+}
